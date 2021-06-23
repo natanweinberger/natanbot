@@ -1,0 +1,12 @@
+version: '3.6'
+
+services:
+  runner:
+    build: .
+    environment:
+      PYTHONPATH: /var/app
+    env_file:
+      - .env.local
+    volumes:
+      - ./:/var/app
+    tty: true
